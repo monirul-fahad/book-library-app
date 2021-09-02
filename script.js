@@ -5,13 +5,13 @@ const showError = document.getElementById('error')
 const bookContainer = document.getElementById('books-container');
 
 // Spinner function
-const showSpinner = style => {
+const spinner = style => {
     document.getElementById('spinner').style.display = style;
 }
 // Getting input value on btn click
 const searchInput = () => {
     // Display spiner
-    showSpinner('block')
+    spinner('block')
     // Clear DOM 
     bookContainer.textContent = '';
     totalBook.textContent = '';
@@ -23,7 +23,7 @@ const searchInput = () => {
             <h3 class="text-danger text-center fw-bolder"> Please Write A Book Name..</h3>
             `;
     // Hide spinner
-    showSpinner('none')
+    spinner('none')
    } 
    else {
     // API call
@@ -87,5 +87,5 @@ const showData = (items) => {
         });
     }
     // Hide spinner
-    showSpinner('none')
+    spinner('none')
 }
