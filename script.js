@@ -20,7 +20,7 @@ const searchInput = () => {
    if (inputField.value === '') {
        // Error handle
         showError.innerHTML = `
-            <h3 class="text-danger text-center fw-bolder"> Please Write A Book Name..</h3>
+            <h3 class="text-danger text-center fw-bolder"> Please Write A Book Name...</h3>
             `;
     // Hide spinner
     spinner('none')
@@ -42,15 +42,15 @@ const showData = (items) => {
     if (items.numFound === 0) {
         // Error handle
         showError.innerHTML = `
-            <h3 class="text-warning text-center fw-bolder"> No Result Found..!!</h3>
+            <h3 class="text-warning text-center fw-bolder"> No Result Found..!!!</h3>
             `;
     }
     else {
-        // Total search item
+        // Total search items number
         totalBook.innerHTML = `
-            <h3 class="bg-secondary text-info text-center">${items.numFound} Books Found</h3>
+            <h2 class=" p-3 text-primary text-center">${items.numFound} Books Found</h2>
             `;
-        // Display every single book to DOM
+        // Display every single book in DOM
         books.forEach(book => {
             console.log(book)
             const bookDiv = document.createElement('div')
