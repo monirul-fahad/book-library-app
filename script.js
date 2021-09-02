@@ -52,13 +52,12 @@ const showData = (items) => {
             `;
         // Display every single book in DOM
         books.forEach(book => {
-            console.log(book)
             const bookDiv = document.createElement('div')
             bookDiv.classList.add('col')
             bookDiv.innerHTML = `
             <div class="card h-100 shadow">
                 <img  style="height: 350px" src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
+              <div class="card-body">
                 <h4 class="card-title fw-bolder">${book.title}</h4>
                 <p class="mb-0 fw-bold">Written by
                     <span class="text-primary">
@@ -80,12 +79,12 @@ const showData = (items) => {
                     ${book.first_publish_year? book.first_publish_year : 'Unknown'}
                     </span>
                 </p>
-            </div>
+              </div>
             </div>
             `;
             bookContainer.appendChild(bookDiv)
         });
     }
     // Hide spinner
-    spinner('none')
+    spinner('none');
 }
