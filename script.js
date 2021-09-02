@@ -22,7 +22,7 @@ const searchInput = () => {
         showError.innerHTML = `
             <h3 class="text-danger text-center fw-bolder"> Please Write A Book Name..</h3>
             `;
-    //Hide spinner
+    // Hide spinner
     showSpinner('none')
    } 
    else {
